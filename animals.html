@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Питомцы дома хвостиков «ШАНС», которые ждут свою семью." />
+
+    <title>Наши животные — Дом хвостиков «ШАНС»</title>
+
+    <link rel="stylesheet" href="./CSS/main.css" />
+
+    <script src="./js/main.js" defer></script>
+    <script src="./js/animals.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header__inner">
+            <a class="brand" href="./index.html" aria-label="На главную">
+                <span class="brand__mark" aria-hidden="true">♥</span>
+                <span>Дом хвостиков <b>«ШАНС»</b></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" data-menu-toggle>
+                <span class="visually-hidden">Открыть меню</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="main-menu" aria-label="Основная навигация" data-menu>
+                <a href="./index.html#about">О приюте</a>
+                <a href="./animals.html" aria-current="page">Животные</a>
+                <a href="./news.html">Новости</a>
+                <a href="./index.html#help">Как помочь</a>
+                <a href="./index.html#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Познакомьтесь с хвостиками</p>
+
+                <h1>Наши животные</h1>
+
+                <p>
+                    Здесь собраны питомцы, которые сейчас находятся
+                    в приюте и ждут заботливых хозяев.
+                </p>
+            </div>
+
+            <div class="animals-filters" aria-label="Фильтр животных">
+                <button class="animals-filter animals-filter--active" type="button" data-animal-filter="all">
+                    Все
+                </button>
+
+                <button class="animals-filter" type="button" data-animal-filter="cat">
+                    🐈 Кошки
+                </button>
+
+                <button class="animals-filter" type="button" data-animal-filter="dog">
+                    🐕 Собаки
+                </button>
+            </div>
+
+            <div class="animals-list" data-animals-list aria-live="polite"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <span>Дом хвостиков «ШАНС»</span>
+            <span>Сделано с заботой о животных</span>
+        </div>
+    </footer>
+</body>
+
+</html>
