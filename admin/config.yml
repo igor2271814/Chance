@@ -1,0 +1,70 @@
+# Значения REPLACE_* заменим после создания GitHub OAuth-приложения.
+backend:
+  name: github
+  repo: REPLACE_GITHUB_OWNER/REPLACE_REPOSITORY
+  branch: main
+  base_url: https://REPLACE_CLOUDFLARE_WORKER.workers.dev
+  auth_endpoint: auth
+  commit_messages:
+    create: "CMS: новая запись «{{slug}}»"
+    update: "CMS: обновление «{{slug}}»"
+    delete: "CMS: удаление «{{slug}}»"
+    uploadMedia: "CMS: загрузка «{{path}}»"
+
+locale: ru
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: news
+    label: Новости
+    label_singular: Новость
+    folder: content/news
+    create: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Дата публикации, name: date, widget: datetime, format: "YYYY-MM-DD" }
+      - { label: Обложка, name: cover, widget: image, required: false }
+      - { label: Короткий анонс, name: excerpt, widget: text }
+      - { label: Текст новости, name: body, widget: text }
+      - { label: Опубликовать, name: published, widget: boolean, default: true }
+
+  - name: cats
+    label: Кошки
+    label_singular: Кошка
+    folder: content/animals/cats
+    create: true
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{slug}}"
+    fields: &animal_fields
+      - { label: Имя, name: name, widget: string }
+      - { label: Главное фото, name: cover, widget: image }
+      - label: Галерея
+        name: gallery
+        widget: list
+        required: false
+        field: { label: Фото, name: image, widget: image }
+      - { label: Пол, name: sex, widget: select, options: ["Девочка", "Мальчик", "Неизвестно"] }
+      - { label: Возраст, name: age, widget: string, hint: "Например: 2 года" }
+      - { label: Размер, name: size, widget: select, options: ["Маленький", "Средний", "Крупный"] }
+      - { label: Статус, name: status, widget: select, options: ["Ищет дом", "Бронь", "Дома", "Не пристраивается"] }
+      - { label: Кратко о характере, name: excerpt, widget: text }
+      - { label: История и подробности, name: body, widget: text }
+      - { label: Здоровье и прививки, name: health, widget: text, required: false }
+      - { label: Показывать на сайте, name: published, widget: boolean, default: true }
+
+  - name: dogs
+    label: Собаки
+    label_singular: Собака
+    folder: content/animals/dogs
+    create: true
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{slug}}"
+    fields: *animal_fields
