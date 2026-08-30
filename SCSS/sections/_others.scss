@@ -1,0 +1,151 @@
+@use "../base/variables" as *;
+@use "sass:color";
+
+/* ==============================
+   SECTIONS
+   ============================== */
+
+.section {
+    padding: clamp(68px, 9vw, 130px) 0;
+}
+
+.section--tint {
+    background: $lilac;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.section-heading > p:last-child {
+    color: $muted;
+    font-size: 1.1rem;
+}
+
+/* ==============================
+   ABOUT
+   ============================== */
+
+.about {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: clamp(35px, 8vw, 115px);
+    align-items: start;
+}
+
+.about__intro {
+    margin: 0;
+    font-size: clamp(1.8rem, 3.4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+.about__text {
+    max-width: 430px;
+    color: $muted;
+}
+
+.about__text h2 {
+    color: $ink;
+}
+/* ==============================
+   SERVICES
+   ============================== */
+
+.section--services {
+    background: #fffdfa;
+}
+
+.services-list {
+    display: grid;
+    gap: 48px;
+}
+/* ==============================
+   HELP
+   ============================== */
+
+.section--help {
+    color: #fff;
+    background: $orange;
+}
+
+.section--help .eyebrow {
+    color: #fff3d7;
+}
+
+.help {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(35px, 9vw, 130px);
+    align-items: center;
+}
+
+.help h2 {
+    max-width: 500px;
+}
+
+.help > div:first-child > p:not(.eyebrow) {
+    max-width: 620px;
+    font-size: 1.08rem;
+}
+/* ==============================
+   TEAM
+   ============================== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 380px));
+    justify-content: center;
+    gap: 48px;
+}
+/* ==============================
+   COMMUNITY
+   ============================== */
+
+.community-links {
+    display: grid;
+    grid-template-columns: repeat(2, $button-width);
+    justify-content: center;
+    gap: 16px 20px;
+    margin-top: 40px;
+}
+
+.community-links .section-action {
+    margin: 0;
+}
+
+/* ==============================
+   CONTACTS
+   ============================== */
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(35px, 9vw, 120px);
+    align-items: center;
+}
+
+.contacts > div > p:not(.eyebrow) {
+    max-width: 500px;
+    color: $muted;
+    font-size: 1.1rem;
+}
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    padding: 25px 0;
+    color: #fff;
+    background: $ink;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 0.9rem;
+}

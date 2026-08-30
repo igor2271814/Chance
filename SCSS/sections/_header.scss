@@ -1,0 +1,64 @@
+@use "../base/variables" as *;
+@use "sass:color";
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    background: rgba($cream, 0.96);
+    border-bottom: 1px solid rgba($ink, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 76px;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 1.05rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand__mark {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    color: #fff;
+    background: $orange;
+    border-radius: 50%;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.main-nav > a:not(.button) {
+    text-decoration: none;
+}
+
+.main-nav > a:not(.button):hover {
+    color: $orange;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+}
