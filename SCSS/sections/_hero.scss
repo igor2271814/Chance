@@ -1,0 +1,68 @@
+@use "../base/variables" as *;
+@use "sass:color";
+
+/* ==============================
+   HERO
+   ============================== */
+
+.hero {
+    overflow: hidden;
+    padding: clamp(64px, 9vw, 130px) 0;
+    background: $lilac;
+}
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(40px, 7vw, 100px);
+}
+
+.hero__lead {
+    max-width: 540px;
+    margin-bottom: 32px;
+    color: $muted;
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+.hero__gallery {
+    position: relative;
+    min-height: 470px;
+}
+
+.hero__image {
+    position: absolute;
+    object-fit: cover;
+    border: 8px solid #fffdfa;
+    box-shadow: 0 20px 50px rgba($ink, 0.14);
+}
+
+.hero__image--main {
+    inset: 45px 15% 0 0;
+    width: 58%;
+    height: 79%;
+    border-radius: 160px 160px 18px 18px;
+}
+
+.hero__image--top {
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 42%;
+    border-radius: 18px;
+}
+
+.hero__image--bottom {
+    right: 0;
+    bottom: 0;
+    width: 38%;
+    height: 39%;
+    border-radius: 50%;
+}

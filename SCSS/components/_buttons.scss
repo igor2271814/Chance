@@ -1,0 +1,94 @@
+@use "../base/variables" as *;
+@use "sass:color";
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: min(100%, $button-width);
+    min-height: 52px;
+    padding: 12px 22px;
+    color: #fff;
+    background: $orange;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: color.adjust($orange, $lightness: -8%);
+}
+
+.button--small {
+    width: auto;
+    min-width: 0;
+    min-height: 40px;
+    padding: 8px 14px;
+    color: $ink;
+    background: #f3c95f;
+    border-color: #ef0c0c;
+}
+
+.button--green {
+    background: $green;
+}
+
+.button--green:hover {
+    background: color.adjust($green, $lightness: -8%);
+}
+
+.button--dark {
+    background: $ink;
+}
+
+.button--dark:hover {
+    background: color.adjust($ink, $lightness: 8%);
+}
+
+.button--blue {
+    background: $blue;
+}
+
+.button--blue:hover {
+    background: color.adjust($blue, $lightness: -8%);
+}
+
+.button--red {
+    background-color: $red;
+}
+
+.button--red:hover {
+    background-color: color.adjust($red, $lightness: -8%);
+}
+
+.button--odnoclassniki {
+    background-color: $odnoclassniki;
+}
+
+.button--odnoclassniki:hover {
+    background-color: color.adjust($odnoclassniki, $lightness: -8%);
+}
+
+.button--light-blue {
+    background-color: $light-blue;
+}
+
+.button--light-blue:hover {
+    background-color: color.adjust($light-blue, $lightness: -8%);
+}
+
+.text-link {
+    font-weight: 700;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
