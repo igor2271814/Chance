@@ -3,8 +3,12 @@ const filterButtons = document.querySelectorAll("[data-animal-filter]");
 
 let animals = [];
 
+/* ==============================
+   HELPERS
+   ============================== */
+
 const escapeHtml = (text = "") =>
-  text.replace(
+  String(text).replace(
     /[&<>"']/g,
     (symbol) =>
       ({
@@ -15,6 +19,14 @@ const escapeHtml = (text = "") =>
         "'": "&#039;",
       })[symbol],
   );
+
+const getAnimalType = (type) => {
+  return type === "cat" ? "🐈 Кошка" : "🐕 Собака";
+};
+
+/* ==============================
+   ANIMAL CARD
+   ============================== */
 
 const createAnimalCard = (animal) => `
   <article class="animal-card">
@@ -32,8 +44,11 @@ const createAnimalCard = (animal) => `
     </a>
 
     <div class="animal-card__content">
+
       <div class="animal-card__meta">
-        <span>${animal.type === "cat" ? " Кошка" : "🐕 Собака"}</span>
+        <span>
+          ${getAnimalType(animal.type)}
+        </span>
 
         <span class="animal-card__status">
           ${escapeHtml(animal.status)}
@@ -56,9 +71,14 @@ const createAnimalCard = (animal) => `
       >
         Узнать больше →
       </a>
+
     </div>
   </article>
 `;
+
+/* ==============================
+   ANIMAL LIST
+   ============================== */
 
 const renderAnimals = (list) => {
   if (!list.length) {
@@ -76,37 +96,130 @@ const renderAnimals = (list) => {
     .join("");
 };
 
-const renderAnimalDetail = (animal) => {
-  const galleryHtml = animal.gallery && animal.gallery.length
-    ? `
-      <div class="animal-detail__gallery">
-        <h3>Фотографии</h3>
-        <div class="animal-detail__gallery-grid">
-          ${animal.gallery
-            .map(
-              (img) => `
-            <img
-              src="${escapeHtml(img)}"
-              alt="${escapeHtml(animal.name)}"
-              loading="lazy"
-            />
-          `,
-            )
-            .join("")}
-        </div>
+/* ==============================
+   ANIMAL DETAIL
+   ============================== */
+
+const createAnimalSpecs = (animal) => {
+  const specs = [];
+
+  if (animal.sex) {
+    specs.push(`
+      <div class="animal-detail__spec">
+        <dt>Пол</dt>
+        <dd>${escapeHtml(animal.sex)}</dd>
       </div>
-    `
-    : "";
+    `);
+  }
+
+  if (animal.age) {
+    specs.push(`
+      <div class="animal-detail__spec">
+        <dt>Возраст</dt>
+        <dd>${escapeHtml(animal.age)}</dd>
+      </div>
+    `);
+  }
+
+  if (animal.size) {
+    specs.push(`
+      <div class="animal-detail__spec">
+        <dt>Размер</dt>
+        <dd>${escapeHtml(animal.size)}</dd>
+      </div>
+    `);
+  }
+
+  if (!specs.length) {
+    return "";
+  }
+
+  return `
+    <dl class="animal-detail__specs">
+      ${specs.join("")}
+    </dl>
+  `;
+};
+
+const createGallery = (animal) => {
+  if (!Array.isArray(animal.gallery) || !animal.gallery.length) {
+    return "";
+  }
+
+  return `
+    <section class="animal-detail__section">
+      <div class="container">
+        <h2>Фотографии</h2>
+      </div>
+
+      <div class="animal-detail__gallery-grid">
+        ${animal.gallery
+          .map(
+            (img) => `
+              <img
+                src="${escapeHtml(img)}"
+                alt="Фотография ${escapeHtml(animal.name)}"
+                loading="lazy"
+              />
+            `,
+          )
+          .join("")}
+      </div>
+    </section>
+  `;
+};
+
+const createAnimalSection = (title, content) => {
+  if (!content) {
+    return "";
+  }
+
+  return `
+    <section class="animal-detail__section">
+      <div class="container">
+        <h2>${title}</h2>
+        <p>${escapeHtml(content)}</p>
+      </div>
+    </section>
+  `;
+};
+
+const renderAnimalDetail = (animal) => {
+  const galleryHtml =
+    animal.gallery && animal.gallery.length
+      ? `
+        <section class="animal-detail__section">
+          <h2>Фотографии</h2>
+
+          <div class="animal-detail__gallery-grid">
+            ${animal.gallery
+              .map(
+                (img) => `
+                  <img
+                    src="${escapeHtml(img)}"
+                    alt="${escapeHtml(animal.name)}"
+                    loading="lazy"
+                  />
+                `,
+              )
+              .join("")}
+          </div>
+        </section>
+      `
+      : "";
 
   animalsList.innerHTML = `
-    <article class="animal-detail animal-detail--full">
-      <div class="container">
-        <a class="text-link" href="./animals.html">
-          ← Все животные
-        </a>
-      </div>
+    <article class="animal-detail">
+
+      <a
+        class="animal-detail__back text-link"
+        href="./animals.html"
+      >
+        ← Все животные
+      </a>
 
       <div class="animal-detail__header">
+
         <div class="animal-detail__main-image">
           <img
             src="${escapeHtml(animal.cover)}"
@@ -115,108 +228,124 @@ const renderAnimalDetail = (animal) => {
         </div>
 
         <div class="animal-detail__info">
-          <div class="container">
-            <div class="animal-detail__meta">
-              <span class="animal-detail__type">
-                ${animal.type === "cat" ? "🐈 Кошка" : "🐕 Собака"}
-              </span>
 
-              <span class="animal-detail__status">
-                ${escapeHtml(animal.status)}
-              </span>
-            </div>
+          <div class="animal-detail__meta">
+            <span class="animal-detail__type">
+              ${animal.type === "cat" ? "🐈 Кошка" : "🐕 Собака"}
+            </span>
 
-            <h1>${escapeHtml(animal.name)}</h1>
-
-            <dl class="animal-detail__specs">
-              ${animal.sex ? `
-                <dt>Пол:</dt>
-                <dd>${escapeHtml(animal.sex)}</dd>
-              ` : ""}
-
-              ${animal.age ? `
-                <dt>Возраст:</dt>
-                <dd>${escapeHtml(animal.age)}</dd>
-              ` : ""}
-
-              ${animal.size ? `
-                <dt>Размер:</dt>
-                <dd>${escapeHtml(animal.size)}</dd>
-              ` : ""}
-            </dl>
-
-            <a
-              class="button button--primary"
-              href="./index.html#contacts"
-            >
-              Хочу познакомиться
-            </a>
+            <span class="animal-detail__status">
+              ${escapeHtml(animal.status)}
+            </span>
           </div>
+
+          <h1>${escapeHtml(animal.name)}</h1>
+
+          <dl class="animal-detail__specs">
+
+            ${
+              animal.sex
+                ? `
+                  <div>
+                    <dt>Пол:</dt>
+                    <dd>${escapeHtml(animal.sex)}</dd>
+                  </div>
+                `
+                : ""
+            }
+
+            ${
+              animal.age
+                ? `
+                  <div>
+                    <dt>Возраст:</dt>
+                    <dd>${escapeHtml(animal.age)}</dd>
+                  </div>
+                `
+                : ""
+            }
+
+            ${
+              animal.size
+                ? `
+                  <div>
+                    <dt>Размер:</dt>
+                    <dd>${escapeHtml(animal.size)}</dd>
+                  </div>
+                `
+                : ""
+            }
+
+          </dl>
+
+          <a
+            class="button button--primary"
+            href="./index.html#contacts"
+          >
+            Хочу познакомиться
+          </a>
+
         </div>
       </div>
 
-      ${animal.description ? `
-        <div class="animal-detail__section">
-          <div class="container">
-            <h2>О питомце</h2>
-            <p>${escapeHtml(animal.description)}</p>
-          </div>
-        </div>
-      ` : ""}
+      ${
+        animal.description
+          ? `
+            <section class="animal-detail__section">
+              <h2>О питомце</h2>
+              <p>${escapeHtml(animal.description)}</p>
+            </section>
+          `
+          : ""
+      }
 
-      ${animal.body ? `
-        <div class="animal-detail__section">
-          <div class="container">
-            <h2>История</h2>
-            <p>${escapeHtml(animal.body)}</p>
-          </div>
-        </div>
-      ` : ""}
+      ${
+        animal.body
+          ? `
+            <section class="animal-detail__section">
+              <h2>История</h2>
+              <p>${escapeHtml(animal.body)}</p>
+            </section>
+          `
+          : ""
+      }
 
-      ${galleryHtml ? `
-        <div class="animal-detail__section animal-detail__section--full">
-          <div class="container">
-            <h2>Фотографии</h2>
-          </div>
-          <div class="animal-detail__gallery-grid">
-            ${animal.gallery
-              .map(
-                (img) => `
-              <img
-                src="${escapeHtml(img)}"
-                alt="${escapeHtml(animal.name)}"
-                loading="lazy"
-              />
-            `,
-              )
-              .join("")}
-          </div>
-        </div>
-      ` : ""}
+      ${galleryHtml}
 
-      ${animal.character ? `
-        <div class="animal-detail__section">
-          <div class="container">
-            <h2>Характер</h2>
-            <p>${escapeHtml(animal.character)}</p>
-          </div>
-        </div>
-      ` : ""}
+      ${
+        animal.character
+          ? `
+            <section class="animal-detail__section">
+              <h2>Характер</h2>
+              <p>${escapeHtml(animal.character)}</p>
+            </section>
+          `
+          : ""
+      }
 
-      ${animal.health ? `
-        <div class="animal-detail__section">
-          <div class="container">
-            <h2>Здоровье</h2>
-            <p>${escapeHtml(animal.health)}</p>
-          </div>
-        </div>
-      ` : ""}
+      ${
+        animal.health
+          ? `
+            <section class="animal-detail__section">
+              <h2>Здоровье</h2>
+              <p>${escapeHtml(animal.health)}</p>
+            </section>
+          `
+          : ""
+      }
+
     </article>
   `;
 
-  // Прокрутка к началу страницы
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 };
+
+/* ==============================
+   FILTERS
+   ============================== */
 
 const filterAnimals = (type) => {
   if (type === "all") {
@@ -239,6 +368,10 @@ const setActiveFilter = (activeButton) => {
   activeButton.classList.add("animals-filter--active");
 };
 
+/* ==============================
+   HASH / ROUTING
+   ============================== */
+
 const showAnimalBySlug = (slug) => {
   if (!slug) {
     renderAnimals(animals);
@@ -246,24 +379,38 @@ const showAnimalBySlug = (slug) => {
   }
 
   const decodedSlug = decodeURIComponent(slug);
-  const animal = animals.find((a) => a.slug === decodedSlug);
+
+  const animal = animals.find(
+    (item) => item.slug === decodedSlug,
+  );
 
   if (animal) {
     renderAnimalDetail(animal);
-  } else {
-    animalsList.innerHTML = `
-      <p class="empty-state">
-        Питомец не найден. 
-        <a href="./animals.html" class="text-link">Вернуться к списку</a>
-      </p>
-    `;
+    return;
   }
+
+  animalsList.innerHTML = `
+    <p class="empty-state">
+      Питомец не найден.
+      <a
+        href="./animals.html"
+        class="text-link"
+      >
+        Вернуться к списку
+      </a>
+    </p>
+  `;
 };
 
 const handleHashChange = () => {
   const hash = window.location.hash.slice(1);
+
   showAnimalBySlug(hash);
 };
+
+/* ==============================
+   FILTER EVENTS
+   ============================== */
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -271,26 +418,49 @@ filterButtons.forEach((button) => {
 
     setActiveFilter(button);
     filterAnimals(type);
+
+    /*
+     * Если пользователь был на странице
+     * конкретного животного и нажал фильтр,
+     * убираем hash.
+     */
+    if (window.location.hash) {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search,
+      );
+    }
   });
 });
 
-// Обработка изменения hash в URL
-window.addEventListener("hashchange", handleHashChange);
+window.addEventListener(
+  "hashchange",
+  handleHashChange,
+);
+
+/* ==============================
+   LOAD ANIMALS
+   ============================== */
 
 const loadAnimals = async () => {
   try {
     const response = await fetch("./data/animals.json");
 
     if (!response.ok) {
-      throw new Error("Не удалось загрузить животных");
+      throw new Error(
+        `HTTP error: ${response.status}`,
+      );
     }
 
     animals = await response.json();
 
-    // Проверяем hash при загрузке страницы
     handleHashChange();
   } catch (error) {
-    console.error(error);
+    console.error(
+      "Не удалось загрузить животных:",
+      error,
+    );
 
     animalsList.innerHTML = `
       <p class="empty-state">
