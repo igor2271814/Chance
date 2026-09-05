@@ -2,13 +2,70 @@
 @use "sass:color";
 
 /* ==============================
-   NEWS
+   NEWS LIST (Сетка новостей)
+   ============================== */
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.news-card {
+    overflow: hidden;
+    padding: 28px;
+    background: $cream;
+    border-radius: 22px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba($ink, 0.1);
+}
+
+.news-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 7px -28px 24px 0px;
+    object-fit: cover;
+    border-radius: 22px 22px 0 0;
+}
+
+.news-card h2 {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+    letter-spacing: -0.03em;
+}
+
+.news-card h2 a {
+    text-decoration: none;
+    color: $ink;
+    transition: color 0.2s ease;
+}
+
+.news-card h2 a:hover {
+    color: $orange;
+}
+
+.news-card > p:not(.eyebrow) {
+    color: $muted;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ==============================
+   NEWS DETAIL (Детальная страница)
    ============================== */
 
 .news-detail {
-    max-width: 480px;
+    grid-column: 1 / -1; // ← Занимает все колонки
+    max-width: 900px;
     margin: 0 auto;
-    padding: 28px;
+    padding: 40px;
     background: $cream;
     border-radius: 22px;
 }
@@ -16,30 +73,47 @@
 .news-detail img {
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin: -10px -28px 24px 5px;
+    margin: 7px -28px 24px 0px;
     object-fit: cover;
     border-radius: 22px 22px 0 0;
 }
 
+.news-detail .eyebrow {
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+}
+
 .news-detail h1 {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.045em;
+    line-height: 1.15;
 }
 
 .news-detail__content p {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: $muted;
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 1.15rem;
+    line-height: 1.8;
 }
 
 .news-detail__content p:last-child {
     margin-bottom: 0;
 }
 
+/* ==============================
+   EMPTY STATE
+   ============================== */
+
 .empty-state {
     grid-column: 1 / -1;
     text-align: center;
     color: $muted;
+    padding: 60px 20px;
+    font-size: 1.1rem;
+}
+
+.empty-state .text-link {
+    display: inline-block;
+    margin-top: 12px;
 }
