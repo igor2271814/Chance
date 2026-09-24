@@ -22,7 +22,7 @@ collections:
     label_singular: Новость
     folder: content/news
     create: true
-    media_folder: assets/uploads/news
+    media_folder: /assets/uploads/news
     public_folder: /Chance/assets/uploads/news
     extension: json
     format: json
@@ -61,7 +61,7 @@ collections:
     label_singular: Кошка
     folder: content/animals/cats
     create: true
-    media_folder: assets/uploads/animals/cats
+    media_folder: /assets/uploads/animals/cats
     public_folder: /Chance/assets/uploads/animals/cats
     extension: json
     format: json
@@ -150,7 +150,7 @@ collections:
     label_singular: Собака
     folder: content/animals/dogs
     create: true
-    media_folder: assets/uploads/animals/dogs
+    media_folder: /assets/uploads/animals/dogs
     public_folder: /Chance/assets/uploads/animals/dogs
     extension: json
     format: json
