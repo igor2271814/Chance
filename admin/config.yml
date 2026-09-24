@@ -2,7 +2,7 @@ backend:
   name: github
   repo: igor2271814/Chance
   branch: master
-  base_url: base_url: https://chance-decap-oauth.igor2278914.workers.dev
+  base_url: https://chance-decap-oauth.igor2278914.workers.dev
   auth_endpoint: auth
 
   commit_messages:
