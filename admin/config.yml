@@ -79,6 +79,7 @@ collections:
         required: false
         field:
           label: Фото
+          name: image
           widget: image
 
       - label: Пол
