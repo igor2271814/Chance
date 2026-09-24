@@ -445,7 +445,7 @@ window.addEventListener(
 
 const loadAnimals = async () => {
   try {
-    const response = await fetch("./data/animals.json");
+    const response = await fetch(`./data/animals.json?v=${Date.now()}`);
 
     if (!response.ok) {
       throw new Error(

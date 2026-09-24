@@ -139,7 +139,7 @@ window.addEventListener("hashchange", handleHashChange);
 
 const loadNews = async () => {
   try {
-    const response = await fetch("./data/news.json");
+    const response = await fetch(`./data/news.json?v=${Date.now()}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
