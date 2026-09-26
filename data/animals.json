@@ -60,14 +60,20 @@
     "slug": "пестрик"
   },
   {
-    "published": true,
-    "name": "Уилл",
-    "cover": "/Chance/assets/uploads/animals/dogs/1000003691.jpg",
-    "sex": "Мальчик",
-    "age": "14 лет",
     "size": "Крупный",
-    "status": "Ищет дом",
     "excerpt": "Летом найден лабрадор на улице Зубачевской возле детского сада Катюша. Есть клеймо, но хозяина так и не нашли.",
+    "sex": "Мальчик",
+    "name": "Уилл",
+    "published": true,
+    "gallery": [
+      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-11-57.jpg",
+      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-12-03.jpg",
+      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-12-08.jpg",
+      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-12-13.jpg"
+    ],
+    "status": "Ищет дом",
+    "cover": "/Chance/assets/uploads/animals/dogs/1000003691.jpg",
+    "age": "14 лет",
     "type": "dog",
     "slug": "уилл"
   },
