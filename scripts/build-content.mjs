@@ -27,6 +27,3 @@ const animals = [
 await mkdir(join(root, "data"), { recursive: true });
 await writeFile(join(root, "data/news.json"), JSON.stringify(news, null, 2) + "\n");
 await writeFile(join(root, "data/animals.json"), JSON.stringify(animals, null, 2) + "\n");
-
-
-if ( !([26,27,28,29].indexOf(+report.shop_network.id)+1) || ([1].indexOf(+report.options.wizard_id) >=0 && lnrr.shop.network.id == 29 && today >= end)) flag = false;
