@@ -1,3 +1,5 @@
+site_url: https://domhvosticovchance.ru
+display_url: site_url https://domhvosticovchance.ru
 backend:
   name: github
   repo: igor2271814/Chance
@@ -23,7 +25,7 @@ collections:
     folder: content/news
     create: true
     media_folder: /assets/uploads/news
-    public_folder: /Chance/assets/uploads/news
+    public_folder: /assets/uploads/news
     extension: json
     format: json
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -62,7 +64,7 @@ collections:
     folder: content/animals/cats
     create: true
     media_folder: /assets/uploads/animals/cats
-    public_folder: /Chance/assets/uploads/animals/cats
+    public_folder: /assets/uploads/animals/cats
     extension: json
     format: json
     identifier_field: name
@@ -151,7 +153,7 @@ collections:
     folder: content/animals/dogs
     create: true
     media_folder: /assets/uploads/animals/dogs
-    public_folder: /Chance/assets/uploads/animals/dogs
+    public_folder: /assets/uploads/animals/dogs
     extension: json
     format: json
     identifier_field: name
