@@ -46,13 +46,13 @@
     "name": "Пестрик",
     "published": true,
     "gallery": [
-      "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-54-55.jpg",
-      "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-55-02.jpg",
-      "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-55-10.jpg",
-      "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-55-13.jpg"
+      "/assets/uploads/animals/cats/photo_2026-09-24_20-54-55.jpg",
+      "/assets/uploads/animals/cats/photo_2026-09-24_20-55-02.jpg",
+      "/assets/uploads/animals/cats/photo_2026-09-24_20-55-10.jpg",
+      "/assets/uploads/animals/cats/photo_2026-09-24_20-55-13.jpg"
     ],
     "status": "Дома",
-    "cover": "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-54-59.jpg",
+    "cover": "/assets/uploads/animals/cats/photo_2026-09-24_20-54-59.jpg",
     "health": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "age": "9 лет",
@@ -66,13 +66,13 @@
     "name": "Уилл",
     "published": true,
     "gallery": [
-      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-11-57.jpg",
-      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-12-03.jpg",
-      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-12-08.jpg",
-      "/Chance/assets/uploads/animals/dogs/photo_2026-09-26_12-12-13.jpg"
+      "assets/uploads/animals/dogs/photo_2026-09-26_12-11-57.jpg",
+      "assets/uploads/animals/dogs/photo_2026-09-26_12-12-03.jpg",
+      "assets/uploads/animals/dogs/photo_2026-09-26_12-12-08.jpg",
+      "assets/uploads/animals/dogs/photo_2026-09-26_12-12-13.jpg"
     ],
     "status": "Ищет дом",
-    "cover": "/Chance/assets/uploads/animals/dogs/1000003691.jpg",
+    "cover": "assets/uploads/animals/dogs/1000003691.jpg",
     "description": "test",
     "age": "14 лет",
     "type": "dog",
@@ -86,11 +86,11 @@
     "name": "Test",
     "published": true,
     "gallery": [
-      "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-54-59.jpg",
-      "/Chance/assets/uploads/animals/cats/photo_2026-09-24_20-55-02.jpg"
+      "assets/uploads/animals/cats/photo_2026-09-24_20-54-59.jpg",
+      "assets/uploads/animals/cats/photo_2026-09-24_20-55-02.jpg"
     ],
     "status": "Ищет дом",
-    "cover": "/Chance/assets/uploads/animals/cats/murzik.jpg",
+    "cover": "assets/uploads/animals/cats/murzik.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "age": "6 лет",
     "type": "cat",
@@ -105,12 +105,12 @@
     "name": "Test dog 2",
     "published": true,
     "gallery": [
-      "/Chance/assets/uploads/animals/dogs/b0127641d67eab34ef16ddbf6e90c6a1.jpg",
-      "/Chance/assets/uploads/animals/dogs/levretka_2_1.jpg",
-      "/Chance/assets/uploads/animals/dogs/фото-2-собаки-для-детей.jpg"
+      "/assets/uploads/animals/dogs/b0127641d67eab34ef16ddbf6e90c6a1.jpg",
+      "/assets/uploads/animals/dogs/levretka_2_1.jpg",
+      "/assets/uploads/animals/dogs/фото-2-собаки-для-детей.jpg"
     ],
     "status": "Бронь",
-    "cover": "/Chance/assets/uploads/animals/dogs/46.jpg",
+    "cover": "/assets/uploads/animals/dogs/46.jpg",
     "health": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "age": "2 года",
