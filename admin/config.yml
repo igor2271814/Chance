@@ -118,14 +118,14 @@ collections:
           - Дома
           - Не пристраивается
 
-      - label: Кратко о питомце
+      - label: Кратко о питомце (на общей странице с животными)
         name: excerpt
         widget: text
 
-      - label: О питомце
+      - label: О питомце (в карточке животного)
         name: description
         widget: text
-        required: false
+        required: true
 
       - label: История
         name: body

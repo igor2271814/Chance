@@ -443,24 +443,37 @@ window.addEventListener(
    LOAD ANIMALS
    ============================== */
 
+
 const loadAnimals = async () => {
   try {
     const response = await fetch(`./data/animals.json?v=${Date.now()}`);
 
     if (!response.ok) {
-      throw new Error(
-        `HTTP error: ${response.status}`,
-      );
+      throw new Error(`HTTP error: ${response.status}`);
     }
 
     animals = await response.json();
 
+    // Читаем тип животного из URL
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+
+    // Если указан корректный тип, применяем фильтр
+    if (type === "cat" || type === "dog") {
+      const activeButton = document.querySelector(
+        `[data-animal-filter="${type}"]`,
+      );
+
+      if (activeButton) {
+        setActiveFilter(activeButton);
+        filterAnimals(type);
+        return;
+      }
+    }
+
     handleHashChange();
   } catch (error) {
-    console.error(
-      "Не удалось загрузить животных:",
-      error,
-    );
+    console.error("Не удалось загрузить животных:", error);
 
     animalsList.innerHTML = `
       <p class="empty-state">
@@ -470,5 +483,8 @@ const loadAnimals = async () => {
     `;
   }
 };
+
+loadAnimals();
+
 
 loadAnimals();
