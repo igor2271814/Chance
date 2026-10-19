@@ -1,24 +1,5 @@
 [
   {
-    "name": "Пёса",
-    "cover": "assets/uploads/animals/dogs/pesic.jpg",
-    "gallery": [
-      "assets/uploads/animals/dogs/pesic.jpg"
-    ],
-    "sex": "Мальчик",
-    "age": "3 года",
-    "size": "Крутой",
-    "status": "Ищет дом",
-    "excerpt": "Ласковый и спокойный пёсик, который очень хочет найти свой дом.",
-    "description": "Пёса — невероятно ласковый и спокойный пёсик. Он обожает, когда его гладят, и мурлычет от удовольствия. Отлично ладит с людьми и спокойно относится к другим животным.",
-    "body": "Пёса попал к нам с улицы, где жил около подъезда. Очень доверчивый, сразу пошёл на контакт. Ищет спокойный дом, где его будут любить и заботиться о нём.",
-    "character": "Спокойный, ласковый, дружелюбный, доверчивый",
-    "health": "Привит, здоров, кастрирован",
-    "published": true,
-    "type": "dog",
-    "slug": "pesa"
-  },
-  {
     "size": "Крупный",
     "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -58,25 +39,5 @@
     "age": "14 лет",
     "type": "dog",
     "slug": "уилл"
-  },
-  {
-    "size": "Маленький",
-    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n",
-    "sex": "Мальчик",
-    "character": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n",
-    "name": "TEST TEST TEST",
-    "published": true,
-    "gallery": [
-      "/assets/uploads/animals/dogs/b0127641d67eab34ef16ddbf6e90c6a1.jpg",
-      "/assets/uploads/animals/dogs/photo_2026-09-26_12-12-08.jpg"
-    ],
-    "status": "Ищет дом",
-    "cover": "/assets/uploads/animals/dogs/46.jpg",
-    "health": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n",
-    "age": "12",
-    "type": "dog",
-    "slug": "test-test-test"
   }
 ]
