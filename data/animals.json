@@ -1,24 +1,5 @@
 [
   {
-    "name": "Мурзик",
-    "cover": "assets/uploads/animals/cats/murzik.jpg",
-    "gallery": [
-      "assets/uploads/animals/cats/murzik.jpg"
-    ],
-    "sex": "Мальчик",
-    "age": "3 года",
-    "size": "Средний",
-    "status": "Ищет дом",
-    "excerpt": "Ласковый и спокойный кот, который очень хочет найти свой дом.",
-    "description": "Мурзик — невероятно ласковый и спокойный кот. Он обожает, когда его гладят, и мурлычет от удовольствия. Отлично ладит с людьми и спокойно относится к другим животным.",
-    "body": "Мурзик попал к нам с улицы, где жил около подъезда. Очень доверчивый, сразу пошёл на контакт. Ищет спокойный дом, где его будут любить и заботиться о нём.",
-    "character": "Спокойный, ласковый, дружелюбный, доверчивый",
-    "health": "Привит, здоров, кастрирован",
-    "published": true,
-    "type": "cat",
-    "slug": "murzik"
-  },
-  {
     "name": "Пёса",
     "cover": "assets/uploads/animals/dogs/pesic.jpg",
     "gallery": [
@@ -77,24 +58,6 @@
     "age": "14 лет",
     "type": "dog",
     "slug": "уилл"
-  },
-  {
-    "size": "Средний",
-    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "sex": "Мальчик",
-    "name": "Test",
-    "published": true,
-    "gallery": [
-      "assets/uploads/animals/cats/photo_2026-09-24_20-54-59.jpg",
-      "assets/uploads/animals/cats/photo_2026-09-24_20-55-02.jpg"
-    ],
-    "status": "Ищет дом",
-    "cover": "assets/uploads/animals/cats/murzik.jpg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "age": "6 лет",
-    "type": "cat",
-    "slug": "test"
   },
   {
     "size": "Маленький",
